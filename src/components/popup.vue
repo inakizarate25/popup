@@ -1,7 +1,7 @@
 <template>
     <div :class="['popup', { 'popup-show': showPopup }]">
-      <video autoplay muted loop class="video" controls>
-        <source src="../assets/VideoOiltanking-Otamerica-10.11.23.mp4" type="video/mp4">
+      <video class="video" autoplay loop controls muted>
+        <source src="../assets/VideoOiltanking-Otamerica-10.11.23.mp4" type="video/mp4" class="source">
       </video>
       <img src="../assets/times-circle.svg" alt="" class="close-button" @click="closePopup">
     </div>
@@ -34,11 +34,11 @@
   
   <style scoped>
   .popup {
-    width: 100%;
-    height: 100%;
+    width: 98vw;
+    height: 98%;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 12px;
+  
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -49,13 +49,13 @@
   }
   
   .video {
+    width: 98vw;
+    height: 98vh;
+    object-fit: cover;
+  }
+  .source {
     width: 100%;
     height: 100%;
-    object-fit:contain;
-  }
-  
-  .video::-webkit-media-controls {
-    opacity: 0;
   }
   
   .popup-show {
